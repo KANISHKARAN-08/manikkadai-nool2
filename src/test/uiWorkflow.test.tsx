@@ -66,8 +66,8 @@ describe('End-to-End Application UI Workflow', () => {
     expect(container.querySelector('#unit-cm-btn')).toBeNull();
     expect(container.querySelector('#unit-mm-btn')).toBeNull();
 
-    // Verify Virarkadai unit label is present
-    expect(screen.getAllByText(/Virarkadai \(விரற்கடை\)/i).length).toBeGreaterThan(0);
+    // Verify Traditional Wrist Unit label is present
+    expect(screen.getAllByText(/Traditional Wrist Unit \(விரற்கடை\)/i).length).toBeGreaterThan(0);
 
     // Input 10 is default or enter 10
     const input = container.querySelector('#wrist-measurement-input') as HTMLInputElement;

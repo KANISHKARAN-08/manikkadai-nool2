@@ -192,7 +192,7 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({
 
                   <div className="flex items-center justify-between text-xs">
                     <div>
-                      <span className="text-cream-200/70">Measured: </span>
+                      <span className="text-cream-200/70">Wrist Measurement: </span>
                       <strong className="text-cream-100 font-serif text-sm">
                         {r.originalInput} {r.originalUnit}
                       </strong>
@@ -274,18 +274,18 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({
 
                 <div className="grid grid-cols-2 gap-2">
                   <div className="p-2.5 rounded-xl bg-forest-900 border border-forest-800">
-                    <span className="text-[10px] text-siddha-muted uppercase block">Measurement</span>
+                    <span className="text-[10px] text-siddha-muted uppercase block">Wrist Measurement</span>
                     <strong className="text-sm text-gold-300">
                       {selectedRecord.originalInput} {selectedRecord.originalUnit}
                     </strong>
                   </div>
                   <div className="p-2.5 rounded-xl bg-forest-900 border border-forest-800">
                     <span className="text-[10px] text-siddha-muted uppercase block">
-                      {selectedRecord.originalUnit === 'virarkadai' ? 'Mode' : 'Normalized'}
+                      {selectedRecord.originalUnit === 'virarkadai' ? 'Unit' : 'Normalized'}
                     </span>
                     <strong className="text-sm text-cream-100">
                       {selectedRecord.originalUnit === 'virarkadai'
-                        ? 'Traditional Virarkadai'
+                        ? 'Traditional Wrist Unit (விரற்கடை)'
                         : `${selectedRecord.normalizedCm?.toFixed(2)} cm`}
                     </strong>
                   </div>

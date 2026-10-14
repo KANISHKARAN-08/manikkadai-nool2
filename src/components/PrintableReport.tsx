@@ -56,7 +56,7 @@ export const PrintableReport: React.FC<PrintableReportProps> = ({
             Recorded: {new Date(record.timestamp).toLocaleDateString()} {new Date(record.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
           </div>
           <div className="inline-block px-2 py-0.5 rounded bg-gray-100 text-gray-800 text-[11px] font-semibold border border-gray-300">
-            Mode: Traditional Virarkadai
+            Mode: Wrist Measurement (Traditional Wrist Unit)
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@ export const PrintableReport: React.FC<PrintableReportProps> = ({
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 print-avoid-break">
         <div className="p-3 rounded-lg border border-gray-300 bg-gray-50">
           <span className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold block">
-            Submitted Value
+            Wrist Measurement
           </span>
           <span className="text-base sm:text-lg font-bold text-gray-900 font-serif">
             {record.originalInput} {record.originalUnit}

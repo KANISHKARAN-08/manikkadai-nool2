@@ -139,11 +139,11 @@ export const AssessmentPage: React.FC<AssessmentPageProps> = ({
           <span>{t.assessmentFormTitle}</span>
         </div>
         <h1 className="font-serif text-3xl sm:text-4xl font-bold text-cream-50">
-          {language === 'en' ? 'Traditional Virarkadai Assessment' : 'பாரம்பரிய விரற்கடைப் பரிசோதனை'}
+          {language === 'en' ? 'Wrist Circumference Assessment' : 'மணிக்கட்டு சுற்றளவுப் பரிசோதனை'}
         </h1>
         <p className="text-sm text-cream-200/80 font-light max-w-2xl">
           {language === 'en'
-            ? 'Enter classical wrist measurement in Virarkadai (4 to 10 in ¼ increments) to perform authenticated Siddha manuscript reference lookup.'
+            ? 'Enter wrist circumference in Virarkadai (4 to 10 in ¼ increments) to perform authenticated Siddha manuscript reference lookup.'
             : 'பாரம்பரிய நோய் நாடல் நோய் முதல் நாடல் திரட்டு ஏட்டின்படி மணிக்கட்டு சுற்றளவை விரற்கடையில் (4 முதல் 10 வரை) உள்ளிட்டு மூல ஏட்டுப் பதிவுகளைக் காண்க.'}
         </p>
       </div>
@@ -194,7 +194,7 @@ export const AssessmentPage: React.FC<AssessmentPageProps> = ({
               <div className="flex items-center justify-between px-4 py-2.5 rounded-xl bg-forest-900 border border-forest-700 text-xs font-bold text-gold-300">
                 <div className="flex items-center space-x-2">
                   <span className="w-2 h-2 rounded-full bg-gold-400 shadow-sm" />
-                  <span>Virarkadai (விரற்கடை)</span>
+                  <span>Traditional Wrist Unit (விரற்கடை)</span>
                 </div>
                 <span className="text-[11px] font-normal text-cream-200/60">
                   Canonical Proportional Unit
@@ -206,8 +206,8 @@ export const AssessmentPage: React.FC<AssessmentPageProps> = ({
             <div className="space-y-1.5">
               <label htmlFor="wrist-measurement-input" className="block text-xs font-semibold text-gold-300">
                 {language === 'en'
-                  ? 'Traditional Virarkadai Measurement (4 to 10) *'
-                  : 'பாரம்பரிய விரற்கடை அளவு (4 முதல் 10 வரை) *'}
+                  ? 'Wrist Measurement (4 to 10) *'
+                  : 'மணிக்கட்டு அளவீடு (4 முதல் 10 வரை) *'}
               </label>
               <div className="relative">
                 <input
@@ -225,7 +225,7 @@ export const AssessmentPage: React.FC<AssessmentPageProps> = ({
                   } focus:ring-1 focus:ring-gold-500 text-base font-medium text-cream-100 placeholder-cream-200/40 outline-none transition-all`}
                 />
                 <span className="absolute right-3.5 top-3.5 text-xs font-bold text-gold-400">
-                  virarkadai
+                  விரற்கடை
                 </span>
               </div>
             </div>
@@ -254,12 +254,12 @@ export const AssessmentPage: React.FC<AssessmentPageProps> = ({
                   className="w-full px-4 py-2.5 rounded-xl bg-forest-900 border border-forest-700 focus:border-gold-500 focus:ring-1 focus:ring-gold-500 text-sm text-cream-100 placeholder-cream-200/40 outline-none transition-all"
                 />
                 <span className="absolute right-3.5 top-3 text-xs text-siddha-muted font-bold">
-                  virarkadai
+                  விரற்கடை
                 </span>
               </div>
               <p className="text-[11px] text-siddha-muted">
                 {language === 'en'
-                  ? 'Confirms reproducibility within ¼ Virarkadai threshold.'
+                  ? 'Confirms reproducibility within ¼ Virarkadai (one quarter-step) tolerance.'
                   : '¼ விரற்கடை எல்லைக்குள் மீண்டும் பரிசோதிக்க பரிந்துரைக்கப்படுகிறது.'}
               </p>
             </div>
@@ -415,11 +415,11 @@ export const AssessmentPage: React.FC<AssessmentPageProps> = ({
             </div>
           )}
 
-          {/* Measurements Breakdown Table — Purely Virarkadai with zero metric numbers */}
+          {/* Measurements Breakdown Table — Wrist Measurement in Virarkadai */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             <div className="p-3.5 rounded-xl bg-forest-950/70 border border-forest-800">
               <span className="text-[11px] text-siddha-muted uppercase tracking-wider block">
-                {language === 'en' ? 'Submitted Value' : 'உள்ளீடு செய்யப்பட்ட அளவு'}
+                {language === 'en' ? 'Wrist Measurement' : 'மணிக்கட்டு சுற்றளவு'}
               </span>
               <span className="text-lg font-bold text-cream-100">
                 {assessmentResult.originalInput} virarkadai
