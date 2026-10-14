@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-dark: #0B3029;
+    --bg-secondary: #123F35;
+    --gold: #E7B95B;
+    --cream: #F8F4E9;
+    --muted-green: #8EA69A;
+  }
+
+  body {
+    background-color: #0B3029;
+    color: #F8F4E9;
+    background-image: radial-gradient(rgba(231, 185, 91, 0.07) 1px, transparent 1px);
+    background-size: 24px 24px;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', Georgia, Cambria, serif;
+  }
+
+  .font-tamil {
+    font-family: 'Noto Sans Tamil', 'Latha', system-ui, sans-serif;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #061714;
+}
+::-webkit-scrollbar-thumb {
+  background: #1B5347;
+  border-radius: 4px;
+  border: 1px solid rgba(231, 185, 91, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #266D5E;
+}
+
+/* Print Specific Styles */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 15mm 15mm 20mm 15mm;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    background-image: none !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  #root,
+  #root > div,
+  main {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+    overflow: visible !important;
+  }
+
+  /* Hide screen-only chrome */
+  header,
+  footer,
+  nav,
+  button,
+  form,
+  .no-print,
+  .print-hide {
+    display: none !important;
+  }
+
+  /* Print report containers */
+  .print-only,
+  #history-print-section,
+  #assessment-print-section {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .print-report-container {
+    display: block !important;
+    width: 100% !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  }
+
+  .print-avoid-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  h1, h2, h3, h4 {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  p, blockquote {
+    orphans: 3 !important;
+    widows: 3 !important;
+  }
+
+  .font-tamil {
+    font-family: 'Noto Sans Tamil', 'Latha', 'Mukta Malar', 'Vijaya', system-ui, -apple-system, sans-serif !important;
+    line-height: 1.6 !important;
+    word-break: break-word !important;
+  }
+}
+
+/* Subtle glow and animation utilities */
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+.animate-subtle-glow {
+  animation: pulseSubtle 4s ease-in-out infinite;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FCE7A6 0%, #E7B95B 50%, #C69A3B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-glow {
+  border: 1px solid rgba(231, 185, 91, 0.35);
+  box-shadow: 0 0 15px rgba(231, 185, 91, 0.08);
+}
